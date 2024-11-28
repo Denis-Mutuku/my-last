@@ -30,9 +30,27 @@ data2 <- data1 %>%
                             bmi > 30 ~ "obese"))
 # study recruitment
 
-data2 %>% 
+data2 <- data2 %>% 
   mutate(participant = ifelse(weight == "normal",
-                          "yes", "no")) %>% 
-  group_by(participant) %>% 
-  summarise(number = n())
+                          "yes", "no"))
+
+# the number of recruits
+
+data2 %>% 
+  filter(participant == "yes")
+
+# the avarage bmi
+
+data2 %>% 
+  summarise(mean_bmi = mean(bmi),
+            mean_height = mean(height),
+            mean_mass = mean(mass))
+
+
+
+
+
+
+
+
 
