@@ -39,7 +39,7 @@ data2 <- data2 %>%
 data2 %>% 
   filter(participant == "yes")
 
-# the avarage bmi
+# the average bmi
 
 data2 %>% 
   summarise(mean_bmi = mean(bmi),
