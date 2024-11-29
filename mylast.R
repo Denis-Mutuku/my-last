@@ -47,7 +47,7 @@ data2 %>%
             mean_height = mean(height),
             mean_mass = mean(mass))
 
-# labeling the varibales
+# labeling the variables
 
 label(data2$height) = "Height in meters"
 label(data2$mass) = "weight in Kgs"
