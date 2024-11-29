@@ -1,6 +1,7 @@
 # Loading the packages ----
 
 library(tidyverse)
+library(Hmisc)
 
 # data ----
 
@@ -45,6 +46,14 @@ data2 %>%
   summarise(mean_bmi = mean(bmi),
             mean_height = mean(height),
             mean_mass = mean(mass))
+
+# labeling the varibales
+
+label(data2$height) = "Height in meters"
+label(data2$mass) = "weight in Kgs"
+label(data2$participant) = "Those to be recruited"
+
+# 
 
 # End ----
 
