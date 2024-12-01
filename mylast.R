@@ -53,7 +53,9 @@ label(data2$height) = "Height in meters"
 label(data2$mass) = "weight in Kgs"
 label(data2$participant) = "Those to be recruited"
 
-# 
+# filterign those to be included in the study
+recruits <- data2 %>% 
+  filter(participant == "yes")
 
 # End ----
 
