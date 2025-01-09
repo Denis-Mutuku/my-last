@@ -63,6 +63,10 @@ recruits <- data2 %>%
 # practicing causal inference analysis using non experimental methods such as
 # difference in difference analysis, regression discontinuity, etc
 
+#These methods can be used to assess the impact of implemented programs 
+
+
+
 
 
 
