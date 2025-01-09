@@ -60,7 +60,8 @@ recruits <- data2 %>%
 # End ----
 
 
-
+# practicing causal inference analysis using non experimental methods such as
+# difference in difference analysis, regression discontinuity, etc
 
 
 
