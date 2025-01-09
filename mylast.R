@@ -60,13 +60,28 @@ recruits <- data2 %>%
 # End ----
 
 
-# practicing causal inference analysis using non experimental methods such as
-# difference in difference analysis, regression discontinuity, etc
+# more practice on select, filter and mutate and case_when, if else
+starwars <- starwars
 
-#These methods can be used to assess the impact of implemented programs 
+starwars %>% 
+  select(name, height, mass, sex, species) %>% 
+  filter(sex %in% c("male", "female"), species == "Human") %>% 
+  mutate(height = height/100,
+         bmi = mass/height^2,
+         body_size = case_when(bmi < 18 ~ "underweight",
+                               bmi > 18 & bmi < 25 ~ "normal",
+                               bmi > 25 & bmi < 30 ~ "overweight",
+                               bmi > 30 ~ "obese"),
+         recruitment = ifelse(body_size %in% c("normal", "underweight"),
+                              "yes", "no")) %>% 
+  filter(recruitment == "yes")
+  
 
-
-
-
-
+starwars %>% 
+  select(name, height, mass, sex, species) %>% 
+  filter(sex %in% c("male", "female"), species == "Human") %>%
+  group_by(sex) %>% 
+  summarise(average_height = mean(height, na.rm = TRUE),
+            average_mass = mean(mass, na.rm = TRUE)) %>% 
+  arrange(desc(sex))
 
