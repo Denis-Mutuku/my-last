@@ -94,8 +94,7 @@ data_msleep %>%
   head(n = 10) 
 
 data_msleep <- data_msleep %>% 
-  head(n = 10) %>% 
+  mutate(sleep_total = as.character(sleep_total))
 
-
-data_msleep$sleep_total11 <- gsub(".", ",", data_msleep$sleep_total)
+data_msleep$sleep_total1 <- gsub(".", ",", data_msleep$sleep_total)
 data_msleep
