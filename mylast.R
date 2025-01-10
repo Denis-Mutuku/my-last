@@ -85,3 +85,17 @@ starwars %>%
             average_mass = mean(mass, na.rm = TRUE)) %>% 
   arrange(desc(sex))
 
+# using the msleep dataset to practice the use of sep and unite
+
+data_msleep <- msleep %>% 
+  select(name, vore, sleep_total, sleep_rem)
+
+data_msleep %>% 
+  head(n = 10) 
+
+data_msleep <- data_msleep %>% 
+  head(n = 10) %>% 
+
+
+data_msleep$sleep_total11 <- gsub(".", ",", data_msleep$sleep_total)
+data_msleep
