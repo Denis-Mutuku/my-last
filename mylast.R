@@ -98,3 +98,24 @@ data_msleep <- data_msleep %>%
 
 data_msleep$sleep_total1 <- gsub(".", ",", data_msleep$sleep_total)
 data_msleep
+
+
+# starwars dataset
+
+starwars
+
+
+head(starwars)
+
+tail(starwars)
+
+str(starwars)
+
+dim(starwars)
+
+names(starwars)
+
+distinct(starwars)
+
+duplicated(starwars)
+filter(duplicated(starwars))
