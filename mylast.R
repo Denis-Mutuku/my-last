@@ -118,4 +118,8 @@ names(starwars)
 distinct(starwars)
 
 duplicated(starwars)
-filter(duplicated(starwars))
+
+row_number(starwars)
+
+n(starwars)
+
