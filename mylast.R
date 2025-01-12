@@ -122,4 +122,6 @@ duplicated(starwars)
 # the next steps is the learning of the use of other functions in the 
 # mean way of dealing with other ways to be okay 
 
+library(tidyverse)
 
+str(msleep)
