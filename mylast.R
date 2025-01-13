@@ -125,3 +125,20 @@ duplicated(starwars)
 library(tidyverse)
 
 str(msleep)
+
+head(msleep)
+
+msleep <- msleep %>% 
+  select(name, vore, sleep_total) %>% 
+  head(10)
+
+msleep$vore1 <- gsub("omni", "omnivore", msleep$vore)
+msleep$vore1 <- gsub("herbi", "herbivore", msleep$vore1)
+msleep$vore1 <- gsub("carni", "carnivore", msleep$vore1)
+
+msleep
+
+
+
+
+
