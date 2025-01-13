@@ -138,8 +138,6 @@ msleep$vore1 <- gsub("carni", "carnivore", msleep$vore1)
 
 msleep$sleep <- substr(msleep$sleep_total, 1,2)
 
-msleep <- msleep %>% 
-  mutate()
+starwars
 
-separate(msleep, sleep_total, into = c("sleep1", "sleep2"), sep = ".", remove = F)
 
