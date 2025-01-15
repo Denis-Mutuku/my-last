@@ -138,6 +138,6 @@ msleep$vore1 <- gsub("carni", "carnivore", msleep$vore1)
 
 msleep$sleep <- substr(msleep$sleep_total, 1,2)
 
-starwars
+starwars <- starwars
 
 
